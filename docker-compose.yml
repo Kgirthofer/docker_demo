@@ -1,11 +1,9 @@
 version: '2'
 services:
   web:
-    image: httpd
+    build: httpd
     ports:
       - "80:80"
     logging:
       driver: "json-file"
-    volumes:
-      - ./httpd/public-html/:/usr/local/apache2/htdocs/
 
